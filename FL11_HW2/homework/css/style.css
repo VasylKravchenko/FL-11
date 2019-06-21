@@ -1,0 +1,64 @@
+@media print {
+    body {
+        background-color: white;
+        text-align: center;
+    }
+
+    h2 {
+        color: lightskyblue;
+        font-weight: 300;
+    }
+
+    li a {
+        color: black;
+    }
+
+    li::first-letter {
+        color: lightskyblue;
+        font-size: 1.7em;
+        font-weight: 300;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+    
+    ol {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    li:nth-child(even) {
+        text-align: end;
+    }
+
+    li:nth-child(odd) {
+        text-align: start;
+    }
+
+    li {
+        list-style-type: none;
+        width: 25%;
+        align-self: center;
+    }
+    
+    .tm-main-nav, .tm-team-img, .gallery-container, .img-fluid, #contact, .carousel-indicators {
+        display: none;
+    }
+
+    .tm-team-description-container {
+        max-width: 100%;
+    }
+
+
+
+    .padding-medium, .tm-main-content, #tmCarousel {
+        padding: 0;
+    }
+
+    .tm-content-box {
+        margin-bottom: .5rem;
+    }
+
+}
