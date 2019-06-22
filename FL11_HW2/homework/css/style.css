@@ -2,11 +2,15 @@
     body {
         background-color: white;
         text-align: center;
+        padding: 0;
+        font-size: 15px;
     }
 
     h2 {
         color: lightskyblue;
         font-weight: 300;
+        line-height: 1;
+        font-size: 2rem;
     }
 
     li a {
@@ -15,7 +19,7 @@
 
     li::first-letter {
         color: lightskyblue;
-        font-size: 1.7em;
+        font-size: 1.5rem;
         font-weight: 300;
     }
 
@@ -39,8 +43,12 @@
 
     li {
         list-style-type: none;
-        width: 25%;
+        width: 270px;
         align-self: center;
+    }
+
+    section {
+        padding: 0 35px;
     }
     
     .tm-main-nav, .tm-team-img, .gallery-container, .img-fluid, #contact, .carousel-indicators {
@@ -51,14 +59,16 @@
         max-width: 100%;
     }
 
-
+    .tm-banner {
+        padding: 20px;
+    }
 
     .padding-medium, .tm-main-content, #tmCarousel {
         padding: 0;
     }
 
-    .tm-content-box {
-        margin-bottom: .5rem;
+    .tm-content-box, .tm-section-title {
+        margin-bottom: .5em;
     }
 
 }
