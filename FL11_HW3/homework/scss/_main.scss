@@ -72,6 +72,7 @@ body {
         z-index: -1;
     }
 }
+
 .header_text {
     color: $logoTextColor;
     font-family: $fontMain;
@@ -80,6 +81,7 @@ body {
     margin-top: 2rem;
     white-space: pre-line;
 }
+
 .header_button {
     background-color: $btnColor;
     font-size: 1.1rem;
