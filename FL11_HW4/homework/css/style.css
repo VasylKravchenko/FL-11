@@ -41,6 +41,7 @@ header {
     background: url(../img/sample2.jpg) center no-repeat;
     background-size: cover;
     color: #F3F3F3;
+    z-index: 1;
 }
 
 header::after {
@@ -132,6 +133,8 @@ header .wrapper {
 }
 
 main {
+    position: relative;
+    z-index: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,12 +178,16 @@ main {
 }
 
 img {
+    position: relative;
     width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .img-art {
     position: relative;
     max-width: 50%;
+    box-shadow: inset 0vw -5vw 5vw 0vw rgba(0, 0, 0, 0.5);
 }
 
 .like {
@@ -200,7 +207,7 @@ img {
 .img-art p {
     position: absolute;
     color: white;
-    bottom: 2vw;
+    bottom: 1vw;
     left: 2vw;
 }
 
@@ -243,6 +250,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: inset 0vw -5vw 5vw 0vw rgba(0, 0, 0, 0.5);
 }
 
 .img-card:nth-child(1) {
