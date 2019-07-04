@@ -11,8 +11,3 @@ if (a === b && b === c) {
 } else {
     console.log("Triangle doesn't exist")
 }
-
-console.log('check');
-console.log(a === b && b === c);
-console.log(a === b && b === c || b === c && c === a);
-console.log(a < b + c && b < a + c && c < a + b);

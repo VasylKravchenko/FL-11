@@ -12,8 +12,3 @@ if ((a1+b1)/divider === c1 && (a2+b2)/divider === c2) {
 } else {
     console.log('false on');
 }
-
-console.log(c1);
-console.log((a1+b1)/divider);
-console.log(c2);
-console.log((a2+b2)/divider);
