@@ -5,15 +5,12 @@ let emailUser = 'user@gmail.com';
 let emailAdmin = 'admin@gmail.com';
 
 if (user === emailUser || user === emailAdmin) {
-    
     let password = prompt('Enter your password', 'Your password');
     if (user === emailUser && password === 'UserPass' || user === emailAdmin && password === 'AdminPass') {
-        
         let changePaswAsk = confirm('Do you want to change your password?');
         if (changePaswAsk === false) {
             alert('You have failed the change.');
         } else if (changePaswAsk === true) {
-            
             let password = prompt('Enter your old password', 'Your old password');
             if (user === emailUser && password === 'UserPass' || user === emailAdmin && password === 'AdminPass') {
                 
