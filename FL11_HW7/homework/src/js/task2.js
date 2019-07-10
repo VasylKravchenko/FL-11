@@ -2,59 +2,57 @@ let play = confirm('Do you want to play a game?');
 let multiplier = 2;
 let rangeStep = 4;
 let divider = 2;
-let atemptsLeft = 3;
-let atemMax = 3;
-let minPrise = 25;
 
 if (play) {
     while (play) {
-        let playCircle = true;
-        let range = 8;
-        let currentPrizePossible = 100;
+        let startRange = 8;
+        let startPrize = 100;
         let totalPrize = 0;
-                
-        while (playCircle) {
-            let random = Math.floor(Math.random() * (range + 1));
-            let stepUp = false;
+        let playCircle = true;
+        let currentPrizePossible = startPrize;
+        let currentRange = startRange;
 
-            for (let atempts = 1; atempts < atemptsLeft + 1; atempts++) {
-                let msg = prompt(`Choose a roulette pocket number from 0 to ${range}
-                Attempts left: ${atemptsLeft - atempts + 1}
+        while (playCircle) {
+            let random = Math.floor(Math.random() * (startRange + 1));
+            let stepUp = true;
+
+            for (let atempts = 3; atempts > 0; atempts--) {
+                let msg = +prompt(`Choose a roulette pocket number from 0 to ${currentRange}
+                Attempts left: ${atempts}
                 Total prize: ${totalPrize}$
                 Possible prize on current attempt: ${currentPrizePossible}$`);
 
-                if (msg !== random || msg < 0 || isNaN(msg) || msg > range) {
-                    currentPrizePossible /= divider;
-                } else if (msg === random) {
-                    totalPrize += currentPrizePossible;                   
+                if (!msg) {
+                    stepUp = false;
+                    alert(`Thank you for your participation. Your prize is: ${totalPrize}$.`);
                     break;
-                } else {
-                    if (atempts === atemMax) {
-                        stepUp = true;
+                } else if (msg !== random || msg < 0 || isNaN(msg) || msg > currentRange) {
+                    currentPrizePossible /= divider;
+                    if (atempts === 1) {
+                        currentPrizePossible = startPrize;
+                        currentRange = startRange;
+                        stepUp = alert(`Thank you for your participation. Your prize is: ${totalPrize}$.`);
                         break;
                     }
-
-                }
-                
-            } //end For loop
-
-            if (stepUp) {
+                } else if (msg === random) {
+                    totalPrize += currentPrizePossible;
+                    currentPrizePossible *= multiplier;
+                    currentRange += rangeStep;
+                    stepUp = confirm(`Congratulation, you won! Your prize is: ${totalPrize}$.
+                    Do you want to continue?`);
+                    break;
+                } 
+            }
+            if (!stepUp){
                 break;
             }
-            playCircle = confirm(`Congratulation, you won! Your prize is: ${totalPrize}$.
-            Do you want to continue?`);
-            if (playCircle) {
-                range += rangeStep;
-            } else {
-                break;
-            }
-             
-        }        
-        
-        alert(`Thank you for participating! Your prize is: ${totalPrize}$`);        
-             
+        }
+        playCircle = confirm(`Do you want to play again?`);
+        if (!playCircle) {
+            alert('You did not become a billionaire, but can.');
+            break;
+        }            
     }
-
 } else {
     alert('You did not become a billionaire, but can.');
 }
