@@ -5,5 +5,6 @@ function isInteger(num) {
         return false;
     }
 }
+
 console.log(isInteger(3)); //true
 console.log(isInteger(3.1)); //false

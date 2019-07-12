@@ -9,6 +9,7 @@ function reverseNumber(num){
     }
     return result;
  }
+ 
 console.log(reverseNumber(398));//893
 console.log(reverseNumber(-746));//-647
 console.log(reverseNumber(30000));//3
