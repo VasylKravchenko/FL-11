@@ -32,3 +32,16 @@ function executeForEach (arr, func) {
         func(i)
     }
 }
+
+//task3
+function mapArray(arr, func) {
+    let newArr = [];
+    executeForEach(arr, function (arr) {
+        newArr.push(func(arr))
+        });
+    return newArr;
+}
+
+console.log(mapArray([2, 5, 8], function(el){
+    return el + 3;
+}));
