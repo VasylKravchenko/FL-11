@@ -7,5 +7,4 @@ function getMin() {
   return arguments[0];
   }
   
-  console.log(getMin(5, 1, -5)); //-5
-  
+console.log(getMin(5, 1, -5)); //-5
