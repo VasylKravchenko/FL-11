@@ -27,3 +27,8 @@ function findTypes() {
 console.log(findTypes(null, true, 0, NaN, false, 'hello'));
 
 //task2
+function executeForEach (arr, func) {
+    for(const i of arr) {
+        func(i)
+    }
+}
