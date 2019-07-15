@@ -145,10 +145,23 @@ function keys(data) {
     let keyArr = [];
     for (let key in data) {
         if ({}.hasOwnProperty.call(data, key)) {
-            keyArr.push(key)
+            keyArr.push(key);
         }
     }
     return keyArr;
 }
 
 console.log(keys({keyOne: 1, keyTwo: 2, keyThree: 3}));
+
+//task10
+function values(data) {
+    let valueArr = [];
+    for (let key in data) {
+        if ({}.hasOwnProperty.call(data, key)) {
+            valueArr.push(data[key]);
+        }
+    }
+    return valueArr;
+}
+
+console.log(values({keyOne: 1, keyTwo: 2, keyThree: 3}));
