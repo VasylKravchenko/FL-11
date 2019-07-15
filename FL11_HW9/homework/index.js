@@ -8,7 +8,6 @@ function getNumbers(str) {
     }
     return numsArr;
 }
-
 console.log(getNumbers('djf23ju34-2j3'));
 
 //task1
@@ -23,7 +22,6 @@ function findTypes() {
     }
     return typeStore;
 }
-
 console.log(findTypes(null, true, 0, NaN, false, 'hello'));
 
 //task2
@@ -42,7 +40,6 @@ function mapArray(arr, func) {
     return newArr;
 }
 
-
 //task4
 function filterArray(arr, func) {
     let newArr = [];
@@ -60,7 +57,6 @@ function showFormattedDate(date) {
     const year = date.toLocaleString('en-Us', {year: 'numeric'});
     return `Date: ${monthDay} ${year}`
 }
-
 console.log(showFormattedDate(new Date('2019-07-15T06:20:00')));
 
 //task6
@@ -71,7 +67,6 @@ function canConvertToDate(date) {
         return false;
     }
 }
-
 console.log(canConvertToDate('2016-13-18T00:00:00')) // false
 console.log(canConvertToDate('2016-03-18T00:00:00')) // true
 
@@ -82,7 +77,6 @@ function daysBetween(date1, date2) {
     const days = Math.round(msDiff/msPerDay);
     return Math.abs(days)
 }
-
 console.log(daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00')));
 
 //task8
@@ -143,7 +137,6 @@ function keys(data) {
     }
     return keyArr;
 }
-
 console.log(keys({keyOne: 1, keyTwo: 2, keyThree: 3}));
 
 //task10
@@ -156,5 +149,4 @@ function values(data) {
     }
     return valueArr;
 }
-
 console.log(values({keyOne: 1, keyTwo: 2, keyThree: 3}));
