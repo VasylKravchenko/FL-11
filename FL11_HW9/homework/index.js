@@ -60,3 +60,12 @@ function filterArray(arr, func) {
 console.log(filterArray([2, 5, 8], function(el){
     return el > 3;
 }));
+
+//task5
+function showFormattedDate(date) {
+    const monthDay = date.toLocaleString('en-Us', {month: 'short', day: 'numeric'});
+    const year = date.toLocaleString('en-Us', {year: 'numeric'});
+    return `Date: ${monthDay} ${year}`
+}
+
+console.log(showFormattedDate(new Date('2019-07-15T06:20:00')));
