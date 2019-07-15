@@ -139,3 +139,16 @@ let inputData = [
 ];
 
 console.log(getAmountOfAdultPeople(inputData));
+
+//task9
+function keys(data) {
+    let keyArr = [];
+    for (let key in data) {
+        if ({}.hasOwnProperty.call(data, key)) {
+            keyArr.push(key)
+        }
+    }
+    return keyArr;
+}
+
+console.log(keys({keyOne: 1, keyTwo: 2, keyThree: 3}));
