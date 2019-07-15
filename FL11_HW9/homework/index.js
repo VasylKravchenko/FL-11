@@ -69,3 +69,15 @@ function showFormattedDate(date) {
 }
 
 console.log(showFormattedDate(new Date('2019-07-15T06:20:00')));
+
+//task6
+function canConvertToDate(date) {
+    if (Date.parse(date)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(canConvertToDate('2016-13-18T00:00:00')) // false
+console.log(canConvertToDate('2016-03-18T00:00:00')) // true
