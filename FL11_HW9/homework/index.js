@@ -42,9 +42,6 @@ function mapArray(arr, func) {
     return newArr;
 }
 
-console.log(mapArray([2, 5, 8], function(el){
-    return el + 3;
-}));
 
 //task4
 function filterArray(arr, func) {
@@ -56,10 +53,6 @@ function filterArray(arr, func) {
     });
     return newArr;
 }
-
-console.log(filterArray([2, 5, 8], function(el){
-    return el > 3;
-}));
 
 //task5
 function showFormattedDate(date) {
