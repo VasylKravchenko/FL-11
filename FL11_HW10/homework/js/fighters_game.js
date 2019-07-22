@@ -1,65 +1,59 @@
-function Fighter (person) {
-    let name = person.name;
-    let dmg = person.damage;
-    let hp = person.hp;
-    let agility = person.agility;
-    let fullHp = person.hp;
-    let wins = 0;
-    let losses = 0;
-        
-    this.getName = function() {
-        return name;
+class Fighter {
+    constructor(person) {
+        let name = person.name;
+        let dmg = person.damage;
+        let hp = person.hp;
+        let agility = person.agility;
+        let fullHp = person.hp;
+        let wins = 0;
+        let losses = 0;
+        this.getName = function () {
+            return name;
+        };
+        this.getDamage = function () {
+            return dmg;
+        };
+        this.getHealth = function () {
+            return hp;
+        };
+        this.getAgility = function () {
+            return agility;
+        };
+        this.heal = function (addHp) {
+            if (fullHp > hp + addHp) {
+                hp += addHp;
+            } else {
+                hp = fullHp;
+            }
+        };
+        this.dealDamage = function (dmg) {
+            if (hp > 0 && dmg < hp) {
+                hp -= dmg;
+            } else {
+                hp = 0;
+            }
+        };
+        this.attack = function (defender) {
+            let successRange = 100;
+            let successPoint = Math.floor(Math.random() * successRange + 1);
+            let attackProbability = successRange - defender.getAgility();
+            if (attackProbability <= successPoint) {
+                defender.dealDamage(dmg);
+                console.log(`${name} makes ${dmg} damage ${defender.getName()}`);
+            } else {
+                console.log(`${name} attack missed`);
+            }
+        };
+        this.addWin = function () {
+            wins++;
+        };
+        this.addLoss = function () {
+            losses++;
+        };
+        this.logCombatHistory = function () {
+            console.log(`Name: ${name}, Wins: ${wins}, Losses: ${losses}`);
+        };
     }
-    this.getDamage = function() {
-        return dmg;
-    }
-    this.getHealth = function() {
-        return hp;
-    }
-    this.getAgility = function() {
-        return agility;
-    }
-    
-    this.heal = function(addHp) {
-        if (fullHp > hp + addHp) {
-            hp += addHp;
-        } else {
-            hp = fullHp;
-        }
-    }
-    
-    this.dealDamage = function(dmg) {
-        if (hp > 0 && dmg < hp) {
-            hp -= dmg;
-        } else {
-            hp = 0;
-        }
-    }
-
-    this.attack = function(defender) {
-        let successRange = 100;
-        let successPoint = Math.floor(Math.random() * successRange + 1);
-        let attackProbability = successRange - defender.getAgility();
-        if (attackProbability <= successPoint) {
-            defender.dealDamage(dmg);
-            console.log(`${name} makes ${dmg} damage ${defender.getName()}`);
-        } else {
-            console.log(`${name} attack missed`);
-        }
-    }
-    
-    this.addWin = function () {
-        wins++;
-    }
-    
-    this.addLoss = function () {
-        losses++;
-    }
-
-    this.logCombatHistory = function () {
-        console.log(`Name: ${name}, Wins: ${wins}, Losses: ${losses}`);
-    }
-
 }
 
 function battle(unit1, unit2) {
