@@ -81,5 +81,4 @@ function battle(unit1, unit2) {
     } else {
         return console.log(`${unit2.getName()} is dead`);
     }
-
 }
