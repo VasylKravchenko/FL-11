@@ -1,2 +1,81 @@
-/* Your styles goes here */
+* {
+    font-family: "Times new roman", serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+li {
+    position: relative;
+    list-style: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 2.3em;
+    color: rgb(86, 132, 202);
+}
+
+button {
+    border: none;
+    background: transparent;
+    display: block;
+}
+
+label {
+    position: relative;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    top: -0.7rem;
+    display: inline;
+    color: rgb(86, 132, 202);
+}
+
+.wrapper {
+    max-width: 90%;
+    margin: 7rem auto;
+}
+
+.init-task {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+}
+
+.input-task {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    border: 2px solid #bbb;
+    border-radius: .3em;
+    width: 94%;
+    padding: 1em;
+}
+
+.input-task:focus {
+    outline: none;
+}
+
+.add-btn {
+    border: none;
+    color: #fff;
+    background: transparent;
+    margin-left: 1em;
+}
+
+.add-btn:focus {
+    outline: none;
+}
+
+.add-btn_item {
+    font-size: 2.5rem;
+    background: #bbb;
+    border-radius: .3em;
+}
+
+.line {
+    height: .7rem;
+    background: rgba(86, 132, 202, 0.3);
+    margin: 1rem 0;
+}
