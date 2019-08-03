@@ -18,10 +18,17 @@ h2 {
     color: rgb(86, 132, 202);
 }
 
+
+
 button {
     border: none;
     background: transparent;
     display: block;
+    /* outline: none; */
+}
+
+button:focus, input {
+    outline: none;
 }
 
 label {
@@ -34,7 +41,7 @@ label {
 }
 
 .wrapper {
-    max-width: 90%;
+    max-width: 80%;
     margin: 7rem auto;
 }
 
@@ -51,10 +58,6 @@ label {
     border-radius: .3em;
     width: 94%;
     padding: 1em;
-}
-
-.input-task:focus {
-    outline: none;
 }
 
 .add-btn {
@@ -78,4 +81,67 @@ label {
     height: .7rem;
     background: rgba(86, 132, 202, 0.3);
     margin: 1rem 0;
+}
+
+.list-input {
+    display: none;
+    font-family: "Arial", sans-serif;
+    border: 2px solid #bbb;
+    border-radius: 5px;
+    padding: 9px;
+    width: 350px;
+    position: relative;
+    top: -12px;
+}
+
+.check-btn {
+    color: #bbb;
+}
+
+.check-btn_item {
+    line-height: 32px;
+    font-size: 32px;
+}
+
+.edit {
+    color: rgb(86, 132, 202);
+}
+
+.save {
+    color: rgb(86, 132, 202);
+}
+
+.delete {
+    color: rgb(86, 132, 202);
+    float: right;
+}
+
+.material-icons {
+    opacity: 0.6;
+}
+
+.material-icons:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.editMode {
+    height: 36px;
+}
+
+.editMode > label {
+    display: none;
+}
+
+.editMode > .list-input {
+    display: inline;
+}
+
+.editMode > button.checkbox {
+    display: none;
+}
+
+.notification {
+    color: rgb(187, 30, 30);
+    text-align: center;
 }
